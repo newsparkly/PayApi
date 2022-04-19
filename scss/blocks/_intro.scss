@@ -1,0 +1,212 @@
+.intro {
+    z-index: 10;
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 165px;
+    &__container {
+        position: relative;
+        z-index: 2;
+        @include flex-center-vert;
+        justify-content: space-between;
+        padding-right: 110px;
+    }
+    &__content {
+        max-width: 546px;
+        margin-top: 10px;
+    }
+    &__title {
+        @include large-h2;
+        margin-bottom: 45px;
+    }
+    &__form {
+        position: relative;
+        margin-bottom: 16px;
+        max-width: 445px;
+    }
+    &__input {
+        cursor: pointer;
+        border: none;
+        background-color: #FBFCFE;
+        border-radius: 24px;
+        box-shadow: 10px 10px 25px -10px #36536B40;
+        width: 100%;
+        height: 48px;
+        left: 0;
+        padding-left: 27px;
+        outline: none;
+        &::placeholder {
+            font-family: 'Public Sans';
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 18px;
+            color: $juan-blue;
+            opacity: 0.5;
+        }
+    }
+    &__button {
+        border: none;
+        position: absolute;
+        right: 0;
+        cursor: pointer;
+    }
+    &__question {
+        color: #6C8294;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 18px;
+        display: inline-block;
+        margin-left: 27px;
+    }
+    &__contact {
+        display: inline-block;
+        color: #6C8294;
+        @include small-bold;
+        @include transition;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+    &__img {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 0;
+    }
+    &__phone-img {
+        display: inline-block;
+        right: 0;
+    }
+}
+@include breakpoint(max-width, 1000px) {
+    .intro {
+        max-width: 110%;
+        &__form {
+            display: flex;
+            justify-content: center;
+            max-width: 445px;
+        }
+        &__button {
+            right: 0;
+        }
+    }
+}
+@include breakpoint(max-width, 805px) {
+    .intro {
+        &__title {
+            font-family: 'DM Serif Display';
+            font-size: 48px;
+            line-height: 56px;
+            letter-spacing: -0.37px;
+            color: $juan-blue;
+            margin-bottom: 45px;
+        }
+        &__form {
+            display: flex;
+            justify-content: center;
+            max-width: 445px;
+        }
+        &__buttom {
+            right: 0;
+        }
+        // &__img {
+        //     // width: 400px;
+        //     // height: 780px;
+        //     // right: -40px
+        // }
+    }
+}
+@include breakpoint(max-width, 768px) {
+    .intro {
+        &__container {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        &__content {
+            margin: 0 0 0 90px;
+            margin-top: 100px;
+            text-align: center;
+            align-items: center;
+        }
+        &__title {
+            font-size: 48px;
+            line-height: 56px;
+            margin-bottom: 40px;
+        } 
+        &__form {
+            margin-left: 20px;
+            max-width: 445px;
+        }
+        &__buttom {
+            right: 0;
+        }  
+        &__question {
+            margin-left: 10px;
+        }
+        &__img {
+            align-items: center;
+            width: 110%;
+            // height: 780px;
+        }
+        &__phone-img {
+            margin-top: -40px;
+            margin-left: 85px;
+        }
+    }
+}
+@include breakpoint(max-width, 548px) {
+    .intro {
+        &__container {
+            @include flex-center-horz;
+            flex-direction: column-reverse;
+        }
+        &__content {
+            @include flex-center-horz;
+            flex-direction: column;
+            margin: 0 0 0 80px;
+            margin-top: 70px;
+            text-align: center;
+            align-items: center;
+        }
+        &__title {
+            font-size: 32px;
+            line-height: 36px;
+            letter-spacing: -0.25px;
+            margin-bottom: 40px;
+            max-width: 327px;
+            margin-left: 7px;
+        } 
+        &__form {
+            display: block;
+            margin-left: 7px;
+            max-width: 327px;
+            margin-bottom: 16px;
+            max-width: 445;
+            position: inherit;
+        }
+        &__input {
+            display: block;
+            margin-bottom: 16px;
+            position: inherit;
+            margin-left:7px;
+        }
+        &__button {
+            position: relative;
+            display: block;
+            margin-left:7px;
+            width: 327px;
+        }  
+        &__question {
+            margin-left: 7px;
+            margin-top: 24px;
+        }
+        &__img {
+            left: 0;
+            width: 100%;
+            // height: 780px;
+        }
+        &__phone-img {
+            margin-top: -40px;
+            margin-left: 85px;
+        }
+    }
+}

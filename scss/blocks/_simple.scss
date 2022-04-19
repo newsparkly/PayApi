@@ -1,0 +1,40 @@
+.simple {
+    background-image: url(../../img/home/svg/simple-bg-img.svg);
+    background-repeat: no-repeat;
+    background-position: right  center;
+    background-size: contain;
+    margin-bottom: 30px;
+    &__container {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 0;
+    }
+    &__content {
+        max-width: 445px;
+    }
+    &__img {
+        // margin-right: -50px;
+    }
+}
+@include breakpoint(max-width, 768px) {
+    .simple {
+        margin-bottom: 140px;
+        background-image: none;
+        &__container {
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+        &__content {
+            text-align: center;
+            margin-right: 10px;
+            max-width: 573px;
+            margin-left: 0;
+        }
+        &__img {
+            margin-right: 0;
+        }
+    }
+}

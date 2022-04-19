@@ -1,0 +1,119 @@
+.header {
+    position: relative;
+    z-index: 10;
+    &__container{
+        @include flex-center-vert;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    &__logo {
+        margin-right: 25px;
+        @include transition;
+        &:hover {
+            opacity: 0.8;
+        }
+        &:active {
+            opacity: 1
+        }
+    }
+    &__navbar {
+        @include flex-center-vert;
+        width: 100%;
+        position: relative;
+        z-index: 100;
+    }
+    &__list {
+        display: flex;
+
+    }
+    &__item {
+        margin-left: 40px;
+        @include small-bold;
+        color: $light-juan-blue;
+        @include transition;
+        &:hover {
+            opacity: 0.7;
+        }
+        &:active {
+            color: $juan-blue;
+        }
+    }
+    &__link {
+        width: 175px;
+        margin-left: auto;
+        z-index: 101;
+        position: relative;
+    }
+    &__btn-burger {
+        width: 50px;
+        height: 50px;
+        background: transparent;
+        position: relative;
+        border: none;
+        display: none;
+        margin-left: auto;
+        cursor: pointer;
+    }
+    &__burger {
+        display: none;
+        position: relative;
+        width: 28px;
+        height: 3px;
+        background-color: $juan-blue;
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: -7px;
+            left: 0;
+            width: 28px;
+            height: 3px;
+            background-color: $juan-blue;}
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 7px;
+            left: 0;
+            width: 28px;
+            height: 3px;
+            background-color: $juan-blue;
+        }
+    }
+}
+@include breakpoint(max-width, 1552px) {
+    .header__link {
+        font-size: 14px;
+        width: 173px;
+    }
+}
+@include breakpoint(max-width, 920px) {
+    .header__link {
+        padding: 16px 20px 14px 20px;
+        width: 173px;
+        right: 0;
+    }
+}
+@include breakpoint(max-width, 789px) {
+    .header__link {
+        font-size: 13px;
+        padding: 16px 16px 14px 16px;
+        width: 173px;
+    }
+}
+@include breakpoint(max-width, 643px) {
+    .header{
+        &__navbar {
+            display: none;
+        }
+        &__link {
+            display: none;
+        }
+        &__btn-burger {
+            display: inline-block;
+        }
+        &__burger {
+            display: inline-block;
+        }
+    }
+}

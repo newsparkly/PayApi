@@ -1,0 +1,46 @@
+.implement {
+    &__container {
+        display: flex;
+        padding-top: 100px;
+        padding-bottom: 75px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__img {
+        margin-left: -48px;
+    }
+    &__content {
+        max-width: 540px;
+        padding-right: 95px;
+    }
+    &__title {
+        @include h3-text;
+        margin-bottom: 24px;
+    }
+    &__text {
+        @include just-text;
+        color: $light-juan-blue;
+    }
+
+}
+@include breakpoint(max-width, 768px) {
+    .implement {
+        &__container {
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+        &__img {
+            margin-left: 24px;
+            margin-bottom: 0;
+            margin-bottom: 48px;
+        }
+        &__content {
+            padding-right: 0;
+            margin-top: 0;
+            text-align: center;
+            max-width: 573px;
+            margin-bottom: 70px;
+        }
+    }
+}

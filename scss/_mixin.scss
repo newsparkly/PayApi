@@ -1,0 +1,122 @@
+// Texts
+@mixin large-h2 {
+    font-family: 'DM Serif Display';
+    font-size: 72px;
+    line-height: 72px;
+    letter-spacing: -0.55px;
+    color: $juan-blue;
+}
+
+@mixin small-h2 {
+    font-family: 'DM Serif Display';
+    font-size: 56px;
+    line-height: 56px;
+    letter-spacing: -0.43px;
+    color: $juan-blue;
+}
+
+@mixin h3-text {
+    font-family: 'DM Serif Display';
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: 0.37px;
+    color: $juan-blue;
+}
+
+@mixin h4-big {
+    font-family: 'DM Serif Display';
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.25px;
+    color: $juan-blue;
+}
+
+@mixin h4-small {
+    font-family: 'Public Sans';
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: -0.14px;
+    color: $juan-blue;
+}
+
+@mixin h5-text {
+    font-family: 'DM Serif Display';
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.19px;
+    color: $juan-blue;
+}
+
+@mixin just-text {
+    font-family: 'Public Sans';
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+@mixin small-bold {
+    font-family: 'Public Sans';
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+// Vertical centering
+@mixin vertical-centering {
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+// Before va after uchun default
+@mixin bef-af($display: block, $pos: absolute, $content: '') {
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+// Media query
+@mixin breakpoint($property, $width) {
+    @media only screen and ($property: $width) {
+    @content        
+    }
+}
+
+// For positioning
+@mixin abs-position($top, $right, $bottom, $left) {
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+// Flex positioning
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-center-vert {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-center-horz {
+    display: flex;
+    justify-content: center;
+}
+
+// Transition
+@mixin transition {
+    transition: all 0.4s ease;
+}

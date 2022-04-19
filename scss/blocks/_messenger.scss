@@ -1,0 +1,24 @@
+.messenger {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    &__item {
+        margin-right: 24px;
+        &:nth-child(3) {
+            margin-right: 0;
+        }
+    }
+    &__link{
+        &:hover .icon {
+        @include transition;
+        fill:#DA6D97 !important;
+        }
+    }
+}
+@include breakpoint(max-width, 668px) {
+    .messenger {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+    }
+}

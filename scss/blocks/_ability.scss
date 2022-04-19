@@ -1,0 +1,84 @@
+.ability {
+    margin-bottom: 90px;
+    &__list {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        max-width: 350px;
+        text-align: center;
+        margin-right: 30px;
+        height: 280px;
+        &:nth-child(1)::before {
+            display: block;
+            content: url(../img/home/svg/ability-1.svg);
+        }
+        &:nth-child(2)::before {
+            display: block;
+            content: url(../img/home/svg/ability-2.svg);
+        }
+        &:nth-child(3)::before {
+            display: block;
+            content: url(../img/home/svg/ability-3.svg);
+        }
+        &:nth-child(3) {
+            margin-right: 0;
+        }
+    }
+    &__title {
+        @include h4-small;
+        margin-bottom: 16px;
+        position: relative;
+        margin-top: 32px;
+    }
+    &__text {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.12px;
+        color: $light-juan-blue;
+    }
+}
+@include breakpoint(max-width, 768px) {
+    .ability {
+        &__item {
+            position: relative;
+            &::before {
+                position: absolute;
+                left: 40px;
+                bottom: 278px;
+                width: 88px;
+                height: 88px;
+            }
+        }
+    }
+}
+@include breakpoint(max-width, 650px) {
+    .ability {
+        &__list {
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        &__item {
+            margin: 0;
+            padding: 0;
+            max-width: 328px;
+            &::before {
+                left: 100px;
+                bottom: 257px;
+                width: 106px;
+                height: 106px;
+            }
+        }
+    }
+}
+@include breakpoint(max-width, 400px) {
+    .ability {
+        &__item {
+            &::before {
+                left: 100px;
+            }
+        }
+    }
+}

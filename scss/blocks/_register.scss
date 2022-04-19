@@ -1,0 +1,25 @@
+.register {
+    margin-bottom: 100px;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__title {
+        @include h3-text;
+    }
+    &__form {
+        width: 445px;
+        right: 0;
+    }
+}
+@include breakpoint(max-width, 768px) {
+    .register {
+        &__container {
+            flex-direction: column;
+        }
+        &__title {
+            margin-bottom: 40px;
+        }
+    }
+}

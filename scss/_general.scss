@@ -1,0 +1,48 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Public Sans", "DM Serif Display", sans-serif;
+  line-height: 1.5;
+  color: #fff;
+  background-color: #EDF3F8;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.link {
+  padding: 16px 25px 14px 25px;
+  @include small-bold;
+  color: $water-white;
+  background-color: $dark-pink;
+  border-radius: 24px;
+  box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+  @include transition;
+  &:hover {
+    background-color:  #d588a6;
+  }
+  &:active {
+    background-color: $charm-pink;
+  }
+}
