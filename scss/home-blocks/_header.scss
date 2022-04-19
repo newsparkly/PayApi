@@ -10,7 +10,7 @@
         margin-right: 25px;
         @include transition;
         &:hover {
-            opacity: 0.8;
+            opacity: 0.7;
         }
         &:active {
             opacity: 1
@@ -32,7 +32,7 @@
         color: $light-juan-blue;
         @include transition;
         &:hover {
-            opacity: 0.7;
+            opacity: 0.6;
         }
         &:active {
             color: $juan-blue;

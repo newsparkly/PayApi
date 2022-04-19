@@ -1,0 +1,38 @@
+.about-page {
+    &__content {
+        padding-left: 75px;
+    }
+    &__title {
+        max-width: 660px;
+        font-family: 'DM Serif Display';
+        font-size: 56px;
+        font-weight: 400;
+        line-height: 56px;
+        letter-spacing: -0.43px;
+        color: #36536B;
+        margin-top: 50px;
+        margin-bottom: 71px;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 56px;
+    }
+    &__heading {
+        font-family: 'DM Serif Display';
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: -0.25px;
+        color: #36536B;
+    }
+    &__text {
+        max-width: 630px;
+        font-family: 'Public Sans';
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 28px;
+        color: #6C8294;
+
+    }
+}
