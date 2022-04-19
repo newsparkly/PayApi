@@ -1,5 +1,5 @@
 .simple {
-    background-image: url(../../img/home/svg/simple-bg-img.svg);
+    background-image: url(../img/home/svg/simple-bg-img.svg);
     background-repeat: no-repeat;
     background-position: right  center;
     background-size: contain;
@@ -13,9 +13,6 @@
     }
     &__content {
         max-width: 445px;
-    }
-    &__img {
-        // margin-right: -50px;
     }
 }
 @include breakpoint(max-width, 768px) {

@@ -21,7 +21,7 @@
         @include just-text;
         color: $light-juan-blue;
     }
-
+    
 }
 @include breakpoint(max-width, 768px) {
     .implement {

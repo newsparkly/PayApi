@@ -10,8 +10,8 @@
     }
     &__link{
         &:hover .icon {
-        @include transition;
-        fill:#DA6D97 !important;
+            @include transition;
+            fill:#DA6D97 !important;
         }
     }
 }

@@ -108,11 +108,6 @@
         &__buttom {
             right: 0;
         }
-        // &__img {
-        //     // width: 400px;
-        //     // height: 780px;
-        //     // right: -40px
-        // }
     }
 }
 @include breakpoint(max-width, 768px) {
@@ -145,7 +140,6 @@
         &__img {
             align-items: center;
             width: 110%;
-            // height: 780px;
         }
         &__phone-img {
             margin-top: -40px;
@@ -202,7 +196,6 @@
         &__img {
             left: 0;
             width: 100%;
-            // height: 780px;
         }
         &__phone-img {
             margin-top: -40px;

@@ -24,7 +24,7 @@
     }
     &__list {
         display: flex;
-
+        
     }
     &__item {
         margin-left: 40px;
@@ -69,51 +69,51 @@
             width: 28px;
             height: 3px;
             background-color: $juan-blue;}
-        &::after {
-            content: '';
-            display: block;
-            position: absolute;
-            top: 7px;
-            left: 0;
-            width: 28px;
-            height: 3px;
-            background-color: $juan-blue;
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 7px;
+                left: 0;
+                width: 28px;
+                height: 3px;
+                background-color: $juan-blue;
+            }
         }
     }
-}
-@include breakpoint(max-width, 1552px) {
-    .header__link {
-        font-size: 14px;
-        width: 173px;
-    }
-}
-@include breakpoint(max-width, 920px) {
-    .header__link {
-        padding: 16px 20px 14px 20px;
-        width: 173px;
-        right: 0;
-    }
-}
-@include breakpoint(max-width, 789px) {
-    .header__link {
-        font-size: 13px;
-        padding: 16px 16px 14px 16px;
-        width: 173px;
-    }
-}
-@include breakpoint(max-width, 643px) {
-    .header{
-        &__navbar {
-            display: none;
-        }
-        &__link {
-            display: none;
-        }
-        &__btn-burger {
-            display: inline-block;
-        }
-        &__burger {
-            display: inline-block;
+    @include breakpoint(max-width, 1552px) {
+        .header__link {
+            font-size: 14px;
+            width: 173px;
         }
     }
-}
+    @include breakpoint(max-width, 920px) {
+        .header__link {
+            padding: 16px 20px 14px 20px;
+            width: 173px;
+            right: 0;
+        }
+    }
+    @include breakpoint(max-width, 789px) {
+        .header__link {
+            font-size: 15px;
+            padding: 16px 16px 14px 16px;
+            width: 173px;
+        }
+    }
+    @include breakpoint(max-width, 643px) {
+        .header{
+            &__navbar {
+                display: none;
+            }
+            &__link {
+                display: none;
+            }
+            &__btn-burger {
+                display: inline-block;
+            }
+            &__burger {
+                display: inline-block;
+            }
+        }
+    }
