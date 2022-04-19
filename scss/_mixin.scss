@@ -120,3 +120,19 @@
 @mixin transition {
     transition: all 0.4s ease;
 }
+@mixin request-link {
+    padding: 16px 28px 14px 28px;
+    border: 1px solid $juan-blue;
+    background-color: transparent;
+    border-radius: 24px;
+    color: $juan-blue;
+    @include small-bold;
+    @include transition;
+    &:active {
+        opacity: 0.7;
+    }
+    &:hover {
+        background-color: $juan-blue;
+        color: white;
+    }
+}

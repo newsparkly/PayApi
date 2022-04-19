@@ -1,0 +1,134 @@
+.price-page {
+    position: relative;
+    &__title {
+        @include small-h2;
+        margin-top: 50px;
+        margin-bottom: 110px;
+    }
+    &__content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 96px;
+    }
+    &__wrapper {
+        max-width: 350px;
+    }
+    &__heading {
+        @include h4-big;
+        color: $dark-pink;
+        margin-bottom: 16px;
+    }
+    &__text {
+        @include just-text;
+        color: $light-juan-blue;
+        margin-bottom: 8px;
+    }
+    &__price {
+        font-family: 'DM Serif Display';
+        font-size: 56px;
+        line-height: 72px;
+        letter-spacing: -0.44px;
+        margin-bottom: 24px;
+        color: $juan-blue;
+    }
+    &__line {
+        max-width: 350px;
+        height: 1px;
+        background-color: $juan-blue;
+        opacity: 0.25;
+        margin-bottom: 24px;
+    }
+    &__list {
+        margin-bottom: 24px;
+    }
+    &__item {
+        @include just-text;
+        color: $juan-blue;
+        margin-bottom: 8px;
+        margin-left: 36px;
+    }
+    &__withbef {
+        position: relative;
+        &::before {
+            content: url(../img/pricing/svg/ptichka.svg);
+            display: block;
+            position: absolute;
+            left: -35px
+        }
+    }
+    &__link {
+        @include request-link;
+    }
+    &__img {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 0;
+    }
+}
+.opacity06 {
+    opacity: 0.3;
+}
+@include breakpoint(max-width, 768px) {
+    .price-page {
+        &__container {
+            text-align: center;
+            align-items: center;
+        }
+        &__title {
+            @include h3-text;
+        }
+        &__wrapper {
+            align-items: center;
+            text-align: center;
+        }
+        &__heading {
+            font-family: 'DM Serif Display';
+            font-size: 24px;
+            line-height: 40px;
+            letter-spacing: -0.19px;
+            text-align: center;
+        }
+        &__list {
+            align-items: center;
+            text-align: center;
+        }
+    }
+}
+@include breakpoint(max-width, 375px) {
+    .price-page {
+        &__content {
+            flex-direction: column;
+        }
+        &__title {
+            font-size: 32px;
+            line-height: 36px;
+            letter-spacing: -0.25px;
+        }
+        &__heading {
+            font-size: 24px;
+            line-height: 32px;
+            letter-spacing: -0.19px;
+        }
+        &__text {
+            font-size: 13px;
+            line-height: 22px;
+        }
+        &__price {
+            font-size: 56px;
+        }
+        &__link {
+            margin-bottom: 48px;
+        }
+        &__withbef {
+            position: relative;
+            &::before {
+                content: url(../img/pricing/svg/ptichka.svg);
+                display: block;
+                position: absolute;
+                left: 80px
+            }
+        }
+    }
+}
